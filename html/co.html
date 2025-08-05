@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout Page</title>
+  <script src="https://cdn.tailwindcss.com"></script> 
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header / Navbar -->
+  <header class="bg-[#1B2B45] text-white py-4 fixed w-full">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+      <a href="./home.html" class="text-xl font-bold">Exclusive</a>
+
+      <nav class="hidden md:flex space-x-6 text-sm">
+        <a href="#" class="hover:text-gray-300">Home</a>
+        <a href="#" class="hover:text-gray-300">Contact</a>
+        <a href="#" class="hover:text-gray-300">About</a>
+      </nav>
+
+      <div class="flex items-center space-x-4 relative">
+        <div class="relative">
+          <input type="text" placeholder="What are you looking for?" class="px-3 py-1 rounded text-black w-64" />
+          <span class="absolute right-2 top-1.5 text-black">🔍</span>
+        </div>
+        <a href="./cart.html" title="Cart">🛒</a>
+
+        <div class="relative group">
+          <button title="Profile" class="text-red-500">👤</button>
+          <div class="absolute right-0 mt-2 w-48 bg-gray-700 text-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
+            <ul class="py-2 text-sm">
+              <li><a href="profile.html" class="block px-4 py-2 hover:bg-gray-600">Manage My Account</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">My Order</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">My Cancellations</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">My Reviews</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="pt-20"></div>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+    <!-- Billing Form -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-6">Billing Details</h2>
+      <form class="space-y-5">
+        <input type="text" placeholder="First Name*" class="w-full border px-4 py-2 rounded" required />
+        <input type="text" placeholder="Address*" class="w-full border px-4 py-2 rounded" required />
+        <input type="text" placeholder="Town/City*" class="w-full border px-4 py-2 rounded" required />
+        <input type="text" placeholder="Phone Number*" class="w-full border px-4 py-2 rounded" required />
+        <input type="email" placeholder="Email Address*" class="w-full border px-4 py-2 rounded" required />
+        <label class="inline-flex items-center mt-2">
+          <input type="checkbox" class="form-checkbox text-red-500" checked />
+          <span class="ml-2">Save this information for faster check-out next time</span>
+        </label>
+      </form>
+    </div>
+
+    <!-- Order Summary -->
+    <div>
+      <!-- Daftar Produk Dinamis -->
+      <div id="product-list" class="space-y-4 border-b pb-4">
+        <!-- Produk akan dimuat di sini -->
+      </div>
+
+      <!-- Price Summary -->
+      <div class="mt-4 space-y-2">
+        <div class="flex justify-between">
+          <span>Subtotal:</span>
+          <span id="subtotal" class="font-semibold">$0.00</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Shipping:</span>
+          <span class="font-semibold">Free</span>
+        </div>
+        <div class="flex justify-between border-t pt-2">
+          <span>Total:</span>
+          <span id="total" class="font-bold">$0.00</span>
+        </div>
+      </div>
+
+      <!-- Payment Methods -->
+      <div class="mt-6 space-y-2">
+        <label class="flex items-center gap-2">
+          <input type="radio" name="payment" class="accent-red-500" />
+          <span>Bank</span>
+          <img src="../img/Frame 834.png" alt="cards" class="h-5 ml-2" />
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="radio" name="payment" checked class="accent-red-500" />
+          <span>Cash on delivery</span>
+        </label>
+      </div>
+
+      <!-- Coupon -->
+      <div class="flex mt-6">
+        <input type="text" placeholder="Coupon Code" class="flex-1 border px-3 py-2 rounded-l" />
+        <button type="button" class="bg-red-500 text-white px-4 rounded-r hover:bg-red-600">
+          Apply Coupon
+        </button>
+      </div>
+
+      <!-- Place Order Button -->
+      <button id="placeOrderBtn"
+              class="mt-6 w-full bg-red-500 text-white py-3 rounded hover:bg-red-600 font-semibold">
+        Check Out
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white mt-20 py-12 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 text-sm">
+      <div>
+        <h5 class="font-bold mb-2">Exclusive</h5>
+        <p>Subscribe</p>
+        <p class="text-gray-400">Get 10% off your first order</p>
+        <input type="email" placeholder="Enter your email" class="mt-2 px-3 py-1 rounded text-black w-full" />
+      </div>
+      <div>
+        <h5 class="font-bold mb-2">Support</h5>
+        <ul class="space-y-1">
+          <li>Help Center</li>
+          <li>Returns</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-2">Account</h5>
+        <ul class="space-y-1">
+          <li>Login/Register</li>
+          <li>My Account</li>
+          <li>Shop</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-2">Quick Link</h5>
+        <ul class="space-y-1">
+          <li>Privacy Policy</li>
+          <li>Terms of Use</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Popup -->
+  <div id="popup-success" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg p-8 text-center max-w-md w-full">
+      <h2 class="text-4xl font-bold mb-4">Payment is success!</h2>
+      <p class="text-sm text-gray-600 mb-6">Thank you for shopping to our website</p>
+      <a href="./home.html"
+         class="inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition">
+        Back to home page
+      </a>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="../script/co.js"></script>
+</body>
+</html>

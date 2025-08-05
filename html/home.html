@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exclusive Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+ <!-- Header / Navbar -->
+  <header class="bg-[#1B2B45] text-white py-4 fixed w-full  ">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="./home.html" class="text-xl font-bold">Exclusive</a>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-6 text-sm">
+        <a href="#" class="hover:text-gray-300">Home</a>
+        <a href="#" class="hover:text-gray-300">Contact</a>
+        <a href="landing.html" class="hover:text-gray-300">About</a>
+      </nav>
+
+      <!-- Search & Icons -->
+      <div class="flex items-center space-x-4 relative">
+        <!-- Search -->
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="What are you looking for?"
+            class="px-3 py-1 rounded text-black w-64"
+          />
+          <span class="absolute right-2 top-1.5 text-black">🔍</span>
+        </div>
+
+        <!-- Icons -->
+        <a href="./cart.html" title="Cart">🛒</a>
+
+        <!-- Profile Dropdown -->
+        <div class="relative group">
+          <button title="Profile" class="text-red-500">👤</button>
+          <div class="absolute right-0 mt-2 w-48 bg-gray-700 text-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
+            <ul class="py-2 text-sm">
+              <li><a href="profile.html" class="block px-4 py-2 hover:bg-gray-600">Manage My Account</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">My Order</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">My Cancellations</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">My Reviews</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<!-- Tambahkan ini setelah navbar -->
+<div class="pt-20"></div>
+
+   <!-- Sidebar + Hero -->
+    <div class="max-w-7xl mx-auto px-6 mt-8 grid grid-cols-4 gap-6">
+      <aside class="col-span-1 text-sm">
+        <ul class="space-y-2">
+          <li class="font-semibold">Women's Jewelry</li>
+          <li class="text-blue-500">Men's Clothing</li>
+          <li>Electronics</li>
+          <li>Women's Clothing</li>
+        </ul>
+      </aside>
+      <div class="col-span-3">
+        <div
+          class="bg-slate-600 p-6 rounded-md flex justify-between items-center h-48"
+        >
+          <div>
+            <h2 class="text-2xl font-bold text-white">Shop Smarter. Live Better</h2>
+            <p class="text-sm mt-1 text-white">
+              Quality products. Fast shipping. Best prices.
+            </p>
+            <button class="mt-4 bg-gray-400 text-white px-4 py-2 rounded">
+              Shop Now
+            </button>
+          </div>
+          <img
+            src="../img/online-shopping-13-61aac 1.png"
+            alt="Hero image"
+            class="w-36 h-auto"
+          />
+        </div>
+      </div>
+    </div>
+
+
+  <!-- PRODUK -->
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <h2 class="text-2xl font-bold mb-4">Flash Sales</h2>
+    <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+    </div>
+  </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white mt-20 py-12 px-6">
+      <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 text-sm">
+        <div>
+          <h5 class="font-bold mb-2">Exclusive</h5>
+          <p>Subscribe</p>
+          <p class="text-gray-400">Get 10% off your first order</p>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="mt-2 px-3 py-1 rounded text-black w-full"
+          /> 
+        </div>
+        <div>
+          <h5 class="font-bold mb-2">Support</h5>
+          <ul class="space-y-1">
+            <li>Help Center</li>
+            <li>Returns</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold mb-2">Account</h5>
+          <ul class="space-y-1">
+            <li>Login/Register</li>
+            <li>My Account</li>
+            <li>Shop</li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold mb-2">Quick Link</h5>
+          <ul class="space-y-1">
+            <li>Privacy Policy</li>
+            <li>Terms of Use</li>
+            <li>FAQ</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+  <!-- Script -->
+  <script src="../script/script.js"></script>
+</body>
+</html>

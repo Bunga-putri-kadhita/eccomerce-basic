@@ -1,0 +1,50 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Exclusive</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="index.html" />
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="text-xl font-bold">Exclusive</div>
+      <nav class="flex gap-6 text-sm">
+        <a href="index.html" class="hover:text-gray-300">Home</a>
+        <a href="#" class="hover:text-gray-300">Contact</a>
+        <a href="#" class="hover:text-gray-300">About</a>
+        <a href="login.html" class="underline">Sign Up</a>
+      </nav>
+      <input type="text" placeholder="What are you looking for?" class="px-5 py-1 rounded text-sm text-black"/>
+    </div>
+  </header>
+
+  <!-- Form Section -->
+  <main class="max-w-6xl mx-auto grid grid-cols-2 gap-12 px-6 py-16 items-center">
+    <img src="../img/Side Image.png" alt="Cart and Phone" class="rounded shadow-md"/>
+
+    <div>
+      <h2 class="text-2xl font-bold mb-2">Create an account</h2>
+      <p class="text-sm text-gray-500 mb-6">Enter your details below</p>
+      <form id="signupForm" class="space-y-4">
+        <input type="text" placeholder="Name" class="w-full border border-gray-300 px-4 py-2 rounded"/>
+        <input type="text" placeholder="Email or Phone Number" class="w-full border border-gray-300 px-4 py-2 rounded"/>
+        <input type="password" placeholder="Password" class="w-full border border-gray-300 px-4 py-2 rounded"/>
+        <a href="home.html" type="submit" class="w-full bg-slate-900 text-white py-2 rounded hover:bg-slate-800">Create Account</a>
+        <button type="button" class="w-full border border-gray-300 py-2 rounded flex justify-center items-center gap-2 hover:bg-gray-100">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-5 h-5"> Sign up with Google
+        </button>
+      </form>
+      <p class="text-sm text-center mt-4">Already have account? 
+        <a href="login.html" class="text-blue-500 hover:underline">Log in</a>
+      </p>
+    </div>
+  </main>
+
+</body>
+</html>

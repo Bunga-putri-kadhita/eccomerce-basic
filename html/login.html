@@ -1,0 +1,48 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Exclusive</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="text-xl font-bold">Exclusive</div>
+      <nav class="flex gap-6 text-sm">
+        <a href="home.html" class="hover:text-gray-300">Home</a>
+        <a href="#" class="hover:text-gray-300">Contact</a>
+        <a href="#" class="hover:text-gray-300">About</a>
+        <a href="login.html" class="underline">Sign Up</a>
+      </nav>
+      <input type="text" placeholder="What are you looking for?" class="px-2 py-1 rounded text-sm text-black"/>
+    </div>
+  </header>
+
+  <!-- Login Section -->
+  <main class="max-w-6xl mx-auto grid grid-cols-2 gap-12 px-6 py-16 items-center">
+    <img src="../img/Side Image.png" alt="Cart and Phone" class="rounded shadow-md"/>
+
+    <div>
+      <h2 class="text-2xl font-bold mb-2">Log in to Exclusive</h2>
+      <p class="text-sm text-gray-500 mb-6">Enter your details below</p>
+      <form class="space-y-4">
+        <input type="text" placeholder="Email or Phone Number" class="w-full border border-gray-300 px-4 py-2 rounded"/>
+        <input type="password" placeholder="Password" class="w-full border border-gray-300 px-4 py-2 rounded"/>
+        <div class="flex justify-between items-center">
+          <a href="home.html" type="submit" class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">Log In</a>
+          <a href="#" class="text-sm text-red-500 hover:underline">Forgot Password?</a>
+        </div>
+      </form>
+      <p class="text-sm mt-6">Don't have an account? 
+        <a href="register.html" class="text-blue-600 hover:underline">Sign in</a>
+      </p>
+    </div>
+  </main>
+
+</body>
+</html>
